@@ -415,6 +415,21 @@ header.masthead p {
 
 
 
+.btn-info {
+  font-weight: 200;
+  text-transform: none;
+  border: none;
+  border-radius: 0px;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+.btn-info, .btn-info:hover, .btn-info:focus, .btn-info:active {
+  background-color: rgb(255, 255, 255) !important;
+  color: rgb(70, 70, 70) !important;
+}
+
+
+
+
 
 
 
