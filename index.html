@@ -113,60 +113,86 @@
 
            <div class="row">
                <div class="col-lg-8 mx-auto text-center">
-                   <button class="btn btn-default filter-button" data-filter="all">All</button>
-                   <button class="btn btn-default filter-button" data-filter="hdpe">HDPE Pipes</button>
-                   <button class="btn btn-default filter-button" data-filter="sprinkle">Sprinkle Pipes</button>
-                   <button class="btn btn-default filter-button" data-filter="spray">Spray Nozzle</button>
-                   <button class="btn btn-default filter-button" data-filter="irrigation">Irrigation Pipes</button>
+                   <button class="btn btn-default filter-button" data-filter="all">Alla intervjuer</button>
                </div>
            </div>
 
            <div class="row">
-               <div class="gallery_product col-lg-4 col-sm-6 filter hdpe">
+               <div class="col-lg-8 mx-auto text-center">
+                   <select class="form-control" id="select_utbildning" onchange="select_utbildning_function()">
+                       <option value="utbildning">Alla utbildningar</option>
+                       <option value="ingenjor">Ingenjör</option>
+                       <option value="lakare">Läkare</option>
+                   </select>
+               </div>
+           </div>
+
+           <div class="row">
+               <div class="col-lg-8 mx-auto text-center">
+                   <select class="form-control" id="select_skola" onchange="select_skola_function()">
+                       <option value="skola">Alla skolor</option>
+                       <option value="kth">KTH</option>
+                       <option value="chalmers">Chalmers</option>
+                   </select>
+               </div>
+           </div>
+
+           <select multiple class="form-control" id="exampleFormControlSelect2">
+             <option>1</option>
+             <option>2</option>
+             <option>3</option>
+             <option>4</option>
+             <option>5</option>
+           </select>
+
+          </br>
+
+           <div class="row">
+               <div class="gallery_product col-lg-4 col-sm-6 filter ingenjor kth">
                    <img src="http://fakeimg.pl/365x365/" class="img-fluid">
                </div>
 
-               <div class="gallery_product col-lg-4 col-sm-6 filter sprinkle hdpe">
+               <div class="gallery_product col-lg-4 col-sm-6 filter ingenjor kth">
                    <img src="http://fakeimg.pl/365x365/" class="img-fluid">
                </div>
 
-               <div class="gallery_product col-lg-4 col-sm-6 filter hdpe sprinkle">
+               <div class="gallery_product col-lg-4 col-sm-6 filter lakare kth">
                    <img src="http://fakeimg.pl/365x365/" class="img-fluid">
                </div>
 
-               <div class="gallery_product col-lg-4 col-sm-6 filter irrigation sprinkle">
+               <div class="gallery_product col-lg-4 col-sm-6 filter ingenjor chalmers">
                    <img src="http://fakeimg.pl/365x365/" class="img-fluid">
                </div>
 
-               <div class="gallery_product col-lg-4 col-sm-6 filter spray">
+               <div class="gallery_product col-lg-4 col-sm-6 filter lakare chalmers">
                    <img src="http://fakeimg.pl/365x365/" class="img-fluid">
                </div>
 
-               <div class="gallery_product col-lg-4 col-sm-6 filter irrigation">
+               <div class="gallery_product col-lg-4 col-sm-6 filter lakare kth">
                    <img src="http://fakeimg.pl/365x365/" class="img-fluid">
                </div>
 
-               <div class="gallery_product col-lg-4 col-sm-6 filter spray">
+               <div class="gallery_product col-lg-4 col-sm-6 filter lakare chalmers">
                    <img src="http://fakeimg.pl/365x365/" class="img-fluid">
                </div>
 
-               <div class="gallery_product col-lg-4 col-sm-6 filter irrigation">
+               <div class="gallery_product col-lg-4 col-sm-6 filter lakare kth">
                    <img src="http://fakeimg.pl/365x365/" class="img-fluid">
                </div>
 
-               <div class="gallery_product col-lg-4 col-sm-6 filter irrigation">
+               <div class="gallery_product col-lg-4 col-sm-6 filter lakare kth">
                    <img src="http://fakeimg.pl/365x365/" class="img-fluid">
                </div>
 
-               <div class="gallery_product col-lg-4 col-sm-6 filter hdpe">
+               <div class="gallery_product col-lg-4 col-sm-6 filter ingenjor chalmers">
                    <img src="http://fakeimg.pl/365x365/" class="img-fluid">
                </div>
 
-               <div class="gallery_product col-lg-4 col-sm-6 filter spray">
+               <div class="gallery_product col-lg-4 col-sm-6 filter lakare chalmers">
                    <img src="http://fakeimg.pl/365x365/" class="img-fluid">
                </div>
 
-               <div class="gallery_product col-lg-4 col-sm-6 filter sprinkle">
+               <div class="gallery_product col-lg-4 col-sm-6 filter ingenjor kth">
                    <img src="http://fakeimg.pl/365x365/" class="img-fluid">
                </div>
            </div>
@@ -387,6 +413,9 @@
     <script src="static/js/creative.min.js"></script>
 
     <script>
+        var selected_utbildning = "";
+        var selected_skola = "";
+
         $(document).ready(function(){
 
             $(".filter-button").click(function(){
@@ -394,25 +423,80 @@
 
                 if(value == "all")
                 {
-                    //$('.filter').removeClass('hidden');
-                    $('.filter').show('1000');
+                    $('.filter').show();
+
+                    document.getElementById("select_utbildning").value = "utbildning";
+                    document.getElementById("select_skola").value = "skola";
+
+                    selected_skola = "";
+                    selected_utbildning = "";
                 }
                 else
                 {
-        //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-        //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-                    $(".filter").not('.'+value).hide('3000');
-                    $('.filter').filter('.'+value).show('3000');
-
+                    $(".filter").not('.'+value).hide();
+                    $('.filter').filter('.'+value).show();
                 }
             });
 
             if ($(".filter-button").removeClass("active")) {
-        $(this).removeClass("active");
-        }
-        $(this).addClass("active");
+                $(this).removeClass("active");
+            }
+
+            $(this).addClass("active");
 
         });
+
+        function select_utbildning_function()
+        {
+            var value = document.getElementById("select_utbildning").value;
+
+            if (value == "utbildning")
+            {
+                selected_utbildning = "";
+            }
+            else
+            {
+                selected_utbildning = value;
+            }
+
+            $('.filter').show();
+
+            if (selected_utbildning != "")
+            {
+                $(".filter").not('.' + selected_utbildning).hide();
+            }
+
+            if (selected_skola != "")
+            {
+                $(".filter").not('.' + selected_skola).hide();
+            }
+        }
+
+        function select_skola_function()
+        {
+            var value = document.getElementById("select_skola").value;
+
+            if (value == "skola")
+            {
+                selected_skola = "";
+            }
+            else
+            {
+                selected_skola = value;
+            }
+
+            $('.filter').show();
+
+            if (selected_utbildning != "")
+            {
+                $(".filter").not('.' + selected_utbildning).hide();
+            }
+
+            if (selected_skola != "")
+            {
+                $(".filter").not('.' + selected_skola).hide();
+            }
+        }
     </script>
 
   </body>
