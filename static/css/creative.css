@@ -22,7 +22,7 @@ hr.light {
 hr {
   max-width: 60px;
   border-width: 5px;
-  border-color: rgb(40, 150, 100);
+  border-color: rgb(40, 150, 110);
 }
 hr.light {
   border-color: rgb(255, 255, 255);
@@ -112,7 +112,7 @@ h6 {
 }
 
 .bg-primary {
-  background-color: rgb(40, 150, 100) !important;
+  background-color: rgb(40, 150, 110) !important;
 }
 
 .bg-light {
@@ -158,14 +158,14 @@ img::-moz-selection {
 }
 
 .custom-toggler.navbar-toggler {
-    border-color: rgb(40, 150, 100);
+    border-color: rgb(40, 150, 110);
 }
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 #mainNav {
-  background-color: rgb(40, 150, 100);
+  background-color: rgb(40, 150, 110);
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -230,7 +230,7 @@ img::-moz-selection {
     color: rgba(255, 255, 255, 0.8);
   }
   #mainNav.navbar-shrink {
-    background-color: rgb(40, 150, 100);
+    background-color: rgb(40, 150, 110);
   }
   #mainNav.navbar-shrink .navbar-brand {
     color: rgb(255, 255, 255);
@@ -261,7 +261,7 @@ img::-moz-selection {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
-  background-color: rgb(40, 150, 100);
+  background-color: rgb(40, 150, 110);
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -326,7 +326,7 @@ header.masthead p {
   text-align: center;
   opacity: 0;
   color: #fff;
-  background: rgba(40, 150, 100, 0.9);
+  background: rgba(40, 150, 110, 0.9);
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
@@ -374,7 +374,7 @@ header.masthead p {
 }
 
 .text-primary {
-  color: rgb(40, 150, 100) !important;
+  color: rgb(40, 150, 110) !important;
 }
 
 .btn {
@@ -389,25 +389,25 @@ header.masthead p {
   padding: 1rem 2rem;
 }
 .btn-primary {
-  background-color: rgb(40, 150, 100);
-  border-color: rgb(40, 150, 100);
+  background-color: rgb(40, 150, 110);
+  border-color: rgb(40, 150, 110);
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: rgb(255, 255, 255);
-  background-color: rgba(40, 150, 100, 0.9) !important;
+  background-color: rgba(40, 150, 110, 0.9) !important;
 }
 .btn-primary:active, .btn-primary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(40, 150, 100, 0.5) !important;
+  box-shadow: 0 0 0 0.2rem rgba(40, 150, 110, 0.5) !important;
 }
 
 .btn-light:hover, .btn-light:focus, .btn-light:active {
   background-color: rgba(255, 255, 255, 0.85) !important;
-  color: rgb(40, 150, 100);
+  color: rgb(40, 150, 110);
 }
 .btn-light:active, .btn-light:focus {
   box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5) !important;
-  color: rgb(40, 150, 100);
+  color: rgb(40, 150, 110);
 }
 .btn-light, .btn-light:hover, .btn-ligth:focus, .btn-ligth:active {
-  color: rgb(40, 150, 100) !important;
+  color: rgb(40, 150, 110) !important;
 }
