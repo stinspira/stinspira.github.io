@@ -21,10 +21,10 @@
     <!-- Plugin CSS -->
     <link href="static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
+    <link href="static/css/bootstrap-select.min.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="static/css/creative.css" rel="stylesheet">
-
-    <link href="static/css/bootstrap-select.min.css" rel="stylesheet">
   </head>
 
   <body id="page-top">
@@ -42,7 +42,7 @@
               <a class="nav-link js-scroll-trigger" href="#about">Om oss</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Intervjuer</a>
+              <a class="nav-link js-scroll-trigger" href="#intervjuer">Intervjuer</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#portfolio">Bloggar</a>
@@ -100,12 +100,12 @@
 
 
 
-    <section class="bg-dark">
+    <section class="bg-dark" id="intervjuer">
         <div class="container">
 
           <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-              <h2 class="section-heading">We've got what you need!</h2>
+              <h2 class="section-heading">Intervjuer</h2>
               <hr class="my-4">
               <p class="text mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
             </div>
@@ -113,49 +113,47 @@
 
            <div class="row">
                <div class="col-lg-8 mx-auto text-center">
-                   <button class="btn btn-default filter-button" data-filter="all">Alla intervjuer</button>
+                   <button class="btn btn-primary btn-xl filter-button" data-filter="all">Alla intervjuer</button>
                </div>
            </div>
 
-           <div class="row">
-               <div class="col-lg-8 mx-auto text-center">
-                   <select class="form-control" id="select_utbildning" onchange="select_utbildning_function()">
-                       <option value="utbildning">Alla utbildningar</option>
-                       <option value="ingenjor">Ingenjör</option>
-                       <option value="lakare">Läkare</option>
-                   </select>
-               </div>
-           </div>
+          </br>
 
-           <div class="row">
-               <div class="col-lg-8 mx-auto text-center">
-                   <select class="form-control" id="select_skolaaaaaa" onchange="select_skola_aaafunction()">
-                       <option value="skola">Alla skolor</option>
-                       <option value="kth">KTH</option>
-                       <option value="chalmers">Chalmers</option>
-                   </select>
-               </div>
-           </div>
+          <form>
+              <div class="form-row">
+                  <div class="form-group col-md-8 mx-auto text-center">
+                      <select class="selectpicker form-control" data-style="btn-info" data-live-search="true" id="select_utbildning" onchange="select_utbildning_function()">
+                          <option value="no_choice">Alla utbildningar</option>
+                          <option value="ingenjor">Ingenjör</option>
+                          <option value="lakare">Läkare</option>
+                      </select>
+                  </div>
+              </div>
 
-           <div class="row">
-               <div class="col-lg-8 mx-auto text-center">
-                   <select class="form-control" id="select_stad" onchange="select_stad_function()">
-                       <option value="stad">Alla städer</option>
-                       <option value="stockholm">Stockholm</option>
-                       <option value="goteborg">Göteborg</option>
-                   </select>
-               </div>
-           </div>
+              <div class="form-row">
+                  <div class="form-group col-md-2">
+                  </div>
 
-           <div class="row">
-               <div class="col-lg-8 mx-auto text-center">
-                   <select class="selectpicker" data-live-search="true" id="select_skola" onchange="select_skola_function()">
-                       <option value="skola">Alla skolor</option>
-                       <option value="kth">KTH</option>
-                       <option value="chalmers">Chalmers</option>
-                   </select>
-               </div>
-           </div>
+                  <div class="form-group col-md-4">
+                      <select class="selectpicker form-control" data-style="btn-info" data-live-search="true" id="select_skola" onchange="select_skola_function()">
+                          <option value="no_choice">Alla skolor</option>
+                          <option value="kth">KTH</option>
+                          <option value="chalmers">Chalmers</option>
+                      </select>
+                  </div>
+
+                  <div class="form-group col-md-4">
+                      <select class="selectpicker form-control" data-style="btn-info" data-live-search="true" id="select_stad" onchange="select_stad_function()">
+                          <option value="no_choice">Alla städer</option>
+                          <option value="stockholm">Stockholm</option>
+                          <option value="goteborg">Göteborg</option>
+                      </select>
+                  </div>
+
+                  <div class="form-group col-md-2">
+                  </div>
+              </div>
+          </form>
 
           </br>
 
@@ -439,9 +437,7 @@
                 {
                     $('.filter').show();
 
-                    document.getElementById("select_utbildning").value = "utbildning";
-                    document.getElementById("select_skola").value = "skola";
-                    document.getElementById("select_stad").value = "stad";
+                    $('.selectpicker').selectpicker('val', 'no_choice');
 
                     selected_skola = "";
                     selected_utbildning = "";
@@ -466,7 +462,7 @@
         {
             var value = document.getElementById("select_utbildning").value;
 
-            if (value == "utbildning")
+            if (value == "no_choice")
             {
                 selected_utbildning = "";
             }
@@ -497,7 +493,7 @@
         {
             var value = document.getElementById("select_skola").value;
 
-            if (value == "skola")
+            if (value == "no_choice")
             {
                 selected_skola = "";
             }
@@ -528,7 +524,7 @@
         {
             var value = document.getElementById("select_stad").value;
 
-            if (value == "stad")
+            if (value == "no_choice")
             {
                 selected_stad = "";
             }
