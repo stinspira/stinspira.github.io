@@ -124,8 +124,7 @@ h6 {
 }
 
 .bg-img {
-  background-image: url("header.jpg") !important;
-  background-position: center center;
+  background: url("header.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
