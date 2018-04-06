@@ -26,5 +26,9 @@ def klassrumsbesok():
 def placeholder_intervju():
     return render_template("placeholder_intervju.html")
 
+@app.route("/placeholder_inspirator", methods=["GET", "POST"])
+def placeholder_inspirator():
+    return render_template("placeholder_inspirator.html")
+
 if __name__ == '__main__':
     app.run()
