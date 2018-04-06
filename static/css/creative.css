@@ -89,7 +89,7 @@ a.light.active {
   outline: none;
 }
 a.light {
-  color: rgb(240, 240, 240);
+  color: rgb(255, 255, 255);
 }
 a.light:hover,
 a.light:focus,
@@ -524,6 +524,7 @@ header.masthead p {
 
 .portfolio:hover .label {
   opacity: 0;
+  bottom: -100%;
 }
 .portfolio:hover img {
   top:0px;
