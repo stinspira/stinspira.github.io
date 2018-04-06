@@ -22,5 +22,9 @@ def bloggar():
 def klassrumsbesok():
     return render_template("klassrumsbesok.html")
 
+@app.route("/placeholder_intervju", methods=["GET", "POST"])
+def placeholder_intervju():
+    return render_template("placeholder_intervju.html")
+
 if __name__ == '__main__':
     app.run()
