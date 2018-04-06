@@ -14,5 +14,13 @@ def index():
 def intervjuer():
     return render_template("intervjuer.html")
 
+@app.route("/bloggar", methods=["GET", "POST"])
+def bloggar():
+    return render_template("bloggar.html")
+
+@app.route("/klassrumsbesok", methods=["GET", "POST"])
+def klassrumsbesok():
+    return render_template("klassrumsbesok.html")
+
 if __name__ == '__main__':
     app.run()
