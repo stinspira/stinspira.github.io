@@ -117,7 +117,7 @@
                   <div class="form-group col-md-4">
                       <select class="selectpicker form-control" data-style="btn-info" data-live-search="true" id="select_skola" onchange="select_skola_function()">
                           <option value="no_choice">Alla skolor</option>
-                          <option value="stockholm">Stockholms universitet</option>
+                          <option value="stockholms-universitet">Stockholms universitet</option>
                           <option value="lund">Lunds universitet</option>
                           <option value="uppsala">Uppsala universitet</option>
                           <option value="linkoping">Linköpings universitet</option>
@@ -148,6 +148,31 @@
                   <div class="form-group col-md-2">
                   </div>
               </div>
+
+              <div class="form-row">
+                  <div class="form-group col-md-8 mx-auto text-center">
+                      <select class="selectpicker form-control" data-style="btn-info" data-live-search="true" id="select_person" onchange="select_person_function()">
+                          <option value="no_choice">Sök efter person</option>
+                          <option value="madeleine-berner">Madeleine Berner</option>
+                          <option value="oscar-wiigh">Oscar Wiigh</option>
+                          <option value="ramtin-javanmardi">Ramtin Javanmardi</option>
+                          <option value="malin-soderberg">Malin Söderberg</option>
+                          <option value="sofia-sjoberg">Sofia Sjöberg</option>
+                          <option value="elma-josic">Elma Josic</option>
+                          <option value="no_choice">Void3</option>
+                          <option value="no_choice">Void4</option>
+                          <option value="no_choice">Void5</option>
+                          <option value="no_choice">Void6</option>
+                          <option value="no_choice">Void7</option>
+                          <option value="no_choice">Void8</option>
+                          <option value="no_choice">Void9</option>
+                          <option value="no_choice">Void10</option>
+                          <option value="no_choice">Void11</option>
+                          <option value="no_choice">Void12</option>
+                          <option value="no_choice">Void13</option>
+                      </select>
+                  </div>
+              </div>
           </form>
 
           </br>
@@ -157,7 +182,7 @@
 
            <div class="row no-gutters">
 
-               <div class="portfolio gallery_product col-xl-3 col-lg-4 col-md-6 col-sm-12 filter ingenjor civilingenjor informationsteknik kth stockholm">
+               <div class="portfolio gallery_product col-xl-3 col-lg-4 col-md-6 col-sm-12 filter ingenjor madeleine-berner civilingenjor informationsteknik kth stockholm">
                    <a class="portfolio-box" href="https://www.kth.se/blogs/madeleine/">
                       <img src="static/img/background_img_bright_square_small.png" class="img-fluid" />
 
@@ -173,7 +198,7 @@
                    </a>
                </div>
 
-               <div class="portfolio gallery_product col-xl-3 col-lg-4 col-md-6 col-sm-12 filter ingenjor civilingenjor medieteknik kth stockholm">
+               <div class="portfolio gallery_product col-xl-3 col-lg-4 col-md-6 col-sm-12 filter oscar-wiigh ingenjor civilingenjor medieteknik kth stockholm">
                    <a class="portfolio-box" href="https://www.kth.se/blogs/oscar/">
                       <img src="static/img/background_img_bright_square_small.png" class="img-fluid" />
 
@@ -189,7 +214,7 @@
                    </a>
                </div>
 
-               <div class="portfolio gallery_product col-xl-3 col-lg-4 col-md-6 col-sm-12 filter ingenjor civilingenjor datateknik kth stockholm">
+               <div class="portfolio gallery_product col-xl-3 col-lg-4 col-md-6 col-sm-12 filter ramtin-javanmardi ingenjor civilingenjor datateknik kth stockholm">
                    <a class="portfolio-box" href="https://www.kth.se/blogs/ramtin/">
                       <img src="static/img/background_img_bright_square_small.png" class="img-fluid" />
 
@@ -205,7 +230,7 @@
                    </a>
                </div>
 
-               <div class="portfolio gallery_product col-xl-3 col-lg-4 col-md-6 col-sm-12 filter ingenjor civilingenjor industriell-ekonomi kth stockholm">
+               <div class="portfolio gallery_product col-xl-3 col-lg-4 col-md-6 col-sm-12 filter malin-soderberg ingenjor civilingenjor industriell-ekonomi kth stockholm">
                    <a class="portfolio-box" href="https://www.kth.se/blogs/malin/">
                       <img src="static/img/background_img_bright_square_small.png" class="img-fluid" />
 
@@ -221,7 +246,7 @@
                    </a>
                </div>
 
-               <div class="portfolio gallery_product col-xl-3 col-lg-4 col-md-6 col-sm-12 filter ingenjor civilingenjor industriell-teknik-och-hallbarhet kth stockholm">
+               <div class="portfolio gallery_product col-xl-3 col-lg-4 col-md-6 col-sm-12 filter sofia-sjoberg ingenjor civilingenjor industriell-teknik-och-hallbarhet kth stockholm">
                    <a class="portfolio-box" href="https://www.kth.se/blogs/sosjo/">
                       <img src="static/img/background_img_bright_square_small.png" class="img-fluid" />
 
@@ -237,7 +262,7 @@
                    </a>
                </div>
 
-               <div class="portfolio gallery_product col-xl-3 col-lg-4 col-md-6 col-sm-12 filter ingenjor hogskoleingenjor kemiteknik kth stockholm">
+               <div class="portfolio gallery_product col-xl-3 col-lg-4 col-md-6 col-sm-12 filter elma-josic ingenjor hogskoleingenjor kemiteknik kth stockholm">
                    <a class="portfolio-box" href="https://www.kth.se/blogs/elmaj/">
                       <img src="static/img/background_img_bright_square_small.png" class="img-fluid" />
 
@@ -321,6 +346,7 @@
         var selected_utbildning = "";
         var selected_skola = "";
         var selected_stad = "";
+        var selected_person = "";
 
         $(document).ready(function(){
 
@@ -336,6 +362,7 @@
                     selected_skola = "";
                     selected_utbildning = "";
                     selected_stad = "";
+                    selected_person = "";
                 }
                 else
                 {
@@ -352,6 +379,42 @@
 
         });
 
+        function select_person_function()
+        {
+            var value = document.getElementById("select_person").value;
+
+            if (value == "no_choice")
+            {
+                selected_person = "";
+            }
+            else
+            {
+                selected_person = value;
+            }
+
+            $('.filter').show();
+
+            if (selected_person != "")
+            {
+                $(".filter").not('.' + selected_person).hide();
+            }
+
+            if (selected_utbildning != "")
+            {
+                $(".filter").not('.' + selected_utbildning).hide();
+            }
+
+            if (selected_skola != "")
+            {
+                $(".filter").not('.' + selected_skola).hide();
+            }
+
+            if (selected_stad != "")
+            {
+                $(".filter").not('.' + selected_stad).hide();
+            }
+        }
+
         function select_utbildning_function()
         {
             var value = document.getElementById("select_utbildning").value;
@@ -366,6 +429,11 @@
             }
 
             $('.filter').show();
+
+            if (selected_person != "")
+            {
+                $(".filter").not('.' + selected_person).hide();
+            }
 
             if (selected_utbildning != "")
             {
@@ -398,6 +466,11 @@
 
             $('.filter').show();
 
+            if (selected_person != "")
+            {
+                $(".filter").not('.' + selected_person).hide();
+            }
+
             if (selected_utbildning != "")
             {
                 $(".filter").not('.' + selected_utbildning).hide();
@@ -428,6 +501,11 @@
             }
 
             $('.filter').show();
+
+            if (selected_person != "")
+            {
+                $(".filter").not('.' + selected_person).hide();
+            }
 
             if (selected_utbildning != "")
             {

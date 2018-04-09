@@ -561,3 +561,34 @@ header.masthead p {
 	width:100%;
 	height:100%;
 }
+
+
+
+
+
+
+
+
+
+#filters {
+	margin:1.5%;
+	padding:0;
+	list-style:none;
+}
+
+	#filters li {
+		float:left;
+	}
+
+	#filters li span {
+		display: block;
+		padding:5px 20px;
+		text-decoration:none;
+		color:#666;
+		cursor: pointer;
+	}
+
+	#filters li span.active {
+		background: rgb(40, 150, 110);
+		color:#fff;
+	}
