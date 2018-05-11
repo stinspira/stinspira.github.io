@@ -79,15 +79,15 @@
         <div class="container">
 
            <div class="row">
-               <div class="col-lg-8 mx-auto text-center">
+               <div class="col-md-8 mx-auto text-center">
                    <button class="btn btn-primary btn-xl filter-button" data-filter="all">Visa alla intervjuer</button>
                </div>
            </div>
 
           </br>
 
-          <div class="row">
-              <div class="col-lg-8 mx-auto text-center">
+          <div class="row col-md-10 mx-auto text-center">
+              <div class="col-md-12 mx-auto text-center">
                   <ul id="filters" class="clearfix">
                       <li><span class="active" id="alla_button" onclick="alla_click_function()">Alla</span></li>
                       <li><span class="" id="stinspira_button" onclick="stinspira_click_function()">Stinspira</span></li>
@@ -96,8 +96,8 @@
               </div>
           </div>
 
-          <div class="row">
-              <div class="col-lg-8 mx-auto text-center">
+          <div class="row col-md-10 mx-auto text-center">
+              <div class="col-md-12 mx-auto text-center">
                   <ul id="filters" class="clearfix">
                       <li><span class="active" id="bada_button" onclick="bada_click_function()">Alla</span></li>
                       <li><span class="" id="student_button" onclick="student_click_function()">Studenter</span></li>
@@ -107,9 +107,9 @@
           </div>
 
           <form>
-              <div class="form-row">
-                  <div class="form-group col-md-8 mx-auto text-center">
-                      <select class="selectpicker form-control" data-style="btn-info" data-live-search="true" id="select_utbildning" onchange="select_utbildning_function()">
+              <div class="form-row col-md-10 mx-auto text-cent">
+                  <div class="form-group col-md-12 mx-auto text-center">
+                      <select class="selectpicker form-control" data-dropup-auto="false" data-style="btn-info" data-live-search="true" id="select_utbildning" onchange="select_utbildning_function()">
                           <option value="no_choice">Alla utbildningar</option>
                           <option value="ingenjor">Ingenjör</option>
                           <option value="lakare">Läkare</option>
@@ -119,7 +119,7 @@
                           <option value="socionom">Socionom</option>
                           <option value="sjukskoterska">Sjuksköterska</option>
                           <option value="arkitekt">Arkitekt</option>
-                          <option data-content="Kandidatprogrammet i Business<br> and Economics" value="kandidatprogrammet-i-business-and-economics">Kandidatprogrammet i Business and Economics</option>
+                          <option data-content="Kandidatprogrammet i Business<br> and Economics" title="Kandidatprogrammet i Business and Economics" value="kandidatprogrammet-i-business-and-economics">Kandidatprogrammet i Business and Economics</option>
                           <option value="ekonomie-kandidatprogram">Ekonomie kandidatprogram</option>
                           <option value="kandidatprogram-i-foretagsekonomi">Kandidatprogram i företagsekonomi</option>
                           <option value="ekonomprogrammet">Ekonomprogrammet</option>
@@ -133,17 +133,17 @@
                           <option value="industriell-ekonomi">Civilingenjör Industriell ekonomi</option>
                           <option value="rymdteknik">Civilingenjör Rymdteknik</option>
                           <option value="teknisk-fysik">Civilingenjör Teknisk fysik</option>
-                          <option data-content="Civilingenjör Teknisk fysik<br> och elektroteknik" value="teknisk-fysik-och-elektroteknik">Civilingenjör Teknisk fysik och elektroteknik</option>
-                          <option data-content="Civilingenjör Teknisk fysik<br> med materialvetenskap" value="teknisk-fysik-med-materialvetenskap">Civilingenjör Teknisk fysik med materialvetenskap</option>
+                          <option data-content="Civilingenjör Teknisk fysik<br> och elektroteknik" title="Civilingenjör Teknisk fysik och elektroteknik" value="teknisk-fysik-och-elektroteknik">Civilingenjör Teknisk fysik och elektroteknik</option>
+                          <option data-content="Civilingenjör Teknisk fysik<br> med materialvetenskap" title="Civilingenjör Teknisk fysik med materialvetenskap" value="teknisk-fysik-med-materialvetenskap">Civilingenjör Teknisk fysik med materialvetenskap</option>
                           <option value="teknisk-matematik">Civilingenjör Teknisk matematik</option>
                           <option value="teknisk-nanovetenskap">Civilingenjör Teknisk nanovetenskap</option>
                           <option value="elektroteknik">Civilingenjör Elektroteknik</option>
                           <option value="medieteknik">Civilingenjör Medieteknik</option>
                           <option value="energisystem">Civilingenjör Energisystem</option>
                           <option value="teknisk-design">Civilingenjör Teknisk design</option>
-                          <option data-content="Civilingenjör Design och<br> produktframtagning" value="design-och-produktframtagning">Civilingenjör Design och produktframtagning</option>
-                          <option data-content="Civilingenjör Design och<br> produktutveckling" value="design-och-produktutveckling">Civilingenjör Design och produktutveckling</option>
-                          <option data-content="Civilingenjör Maskinteknik<br> - teknisk design" value="maskinteknik-teknisk-design">Civilingenjör Maskinteknik - teknisk design</option>
+                          <option data-content="Civilingenjör Design och<br> produktframtagning" title="Civilingenjör Design och produktframtagning" value="design-och-produktframtagning">Civilingenjör Design och produktframtagning</option>
+                          <option data-content="Civilingenjör Design och<br> produktutveckling" title="Civilingenjör Design och produktutveckling" value="design-och-produktutveckling">Civilingenjör Design och produktutveckling</option>
+                          <option data-content="Civilingenjör Maskinteknik<br> - teknisk design" title="Civilingenjör Maskinteknik - teknisk design" value="maskinteknik-teknisk-design">Civilingenjör Maskinteknik - teknisk design</option>
                           <option value="ekosystemteknik">Civilingenjör Ekosystemteknik</option>
                           <option value="bioteknik">Civilingenjör Bioteknik</option>
                           <option value="molekylar-bioteknik">Civilingenjör Molekylär bioteknik</option>
@@ -155,41 +155,38 @@
                           <option value="energi-och-miljoteknik">Civilingenjör Energi- och miljöteknik</option>
                           <option value="miljo-och-vattenteknik">Civilingenjör Miljö- och vattenteknik</option>
                           <option value="farkostteknik">Civilingenjör Farkostteknik</option>
-                          <option data-content="Civilingenjör Industriell teknik<br> och hållbarhet" value="industriell-teknik-och-hallbarhet">Civilingenjör Industriell teknik och hållbarhet</option>
+                          <option data-content="Civilingenjör Industriell teknik<br> och hållbarhet" title="Civilingenjör Industriell teknik och hållbarhet" value="industriell-teknik-och-hallbarhet">Civilingenjör Industriell teknik och hållbarhet</option>
                           <option value="informationsteknik">Civilingenjör Informationsteknik</option>
                           <option value="informationsteknologi">Civilingenjör Informationsteknologi</option>
-                          <option data-content="Civilingenjör Informations- och<br> kommunikationsteknik" value="informations-och-kommunikationsteknik">Civilingenjör Informations- och kommunikationsteknik</option>
+                          <option data-content="Civilingenjör Informations- och<br> kommunikationsteknik" title="Civilingenjör Informations- och kommunikationsteknik" value="informations-och-kommunikationsteknik">Civilingenjör Informations- och kommunikationsteknik</option>
                           <option value="materialdesign">Civilingenjör Materialdesign</option>
                           <option value="medicinsk-teknik">Civilingenjör Medicinsk teknik</option>
                           <option value="medicin-och-teknik">Civilingenjör Medicin och teknik</option>
                           <option value="teknisk-kemi">Civilingenjör Teknisk kemi</option>
                           <option value="kemiteknik">Civilingenjör Kemiteknik</option>
-                          <option data-content="Civilingenjör Hållbar process- och<br> kemiteknik" value="hallbar-process-och-kemiteknik">Civilingenjör Hållbar process- och kemiteknik</option>
+                          <option data-content="Civilingenjör Hållbar process- och<br> kemiteknik" title="Civilingenjör Hållbar process- och kemiteknik" value="hallbar-process-och-kemiteknik">Civilingenjör Hållbar process- och kemiteknik</option>
                           <option value="kemisk-biologi">Civilingenjör Kemisk biologi</option>
                           <option value="samhallsbyggnad">Civilingenjör Samhällsbyggnad</option>
-                          <option data-content="Civilingenjör System i teknik och<br> samhälle" value="system-i-teknik-och-samhalle">Civilingenjör System i teknik och samhälle</option>
+                          <option data-content="Civilingenjör System i teknik och<br> samhälle" title="Civilingenjör System i teknik och samhälle" value="system-i-teknik-och-samhalle">Civilingenjör System i teknik och samhälle</option>
                           <option value="lantmateri">Civilingenjör Lantmäteri</option>
                           <option value="vag-och-vattenbyggnad">Civilingenjör Väg- och vattenbyggnad</option>
-                          <option data-content="Civilingenjör Kommunikation,<br> transport och samhälle" value="kommunikation-transport-och-samhalle">Civilingenjör Kommunikation, transport och samhälle</option>
+                          <option data-content="Civilingenjör Kommunikation,<br> transport och samhälle" title="Civilingenjör Kommunikation, transport och samhälle" value="kommunikation-transport-och-samhalle">Civilingenjör Kommunikation, transport och samhälle</option>
                           <option value="elektronikdesign">Civilingenjör Elektronikdesign</option>
                           <option value="interaktion-och-design">Civilingenjör Interaktion och design</option>
                           <option value="teknisk-datavetenskap">Civilingenjör Teknisk datavetenskap</option>
                           <option value="arkitektur">Civilingenjör Arkitektur</option>
-                          <option data-content="Högskoleingenjör Ekonomi och<br> produktionsteknik" value="ekonomi-och-produktionsteknik">Högskoleingenjör Ekonomi och produktionsteknik</option>
+                          <option data-content="Högskoleingenjör Ekonomi och<br> produktionsteknik" title="Högskoleingenjör Ekonomi och produktionsteknik" value="ekonomi-och-produktionsteknik">Högskoleingenjör Ekonomi och produktionsteknik</option>
                           <option value="maskinteknik">Högskoleingenjör Maskinteknik</option>
-                          <option data-content="Masterprogrammet Entrepreneurship<br> and Business Design" value="entrepreneurship-and-business-design">Masterprogrammet Entrepreneurship and Business Design</option>
-                          <option data-content="Masterprogrammet Electric<br> Power Engineering" value="electric-power-engineering">Masterprogrammet Electric Power Engineering</option>
+                          <option data-content="Masterprogrammet Entrepreneurship<br> and Business Design" title="Masterprogrammet Entrepreneurship and Business Design" value="entrepreneurship-and-business-design">Masterprogrammet Entrepreneurship and Business Design</option>
+                          <option data-content="Masterprogrammet Electric<br> Power Engineering" title="Masterprogrammet Electric Power Engineering" value="electric-power-engineering">Masterprogrammet Electric Power Engineering</option>
                           <option value="datavetenskap">Datavetenskap</option>
                       </select>
                   </div>
               </div>
 
-              <div class="form-row">
-                  <div class="form-group col-md-2">
-                  </div>
-
-                  <div class="form-group col-md-4">
-                      <select class="selectpicker form-control" data-style="btn-info" data-live-search="true" id="select_skola" onchange="select_skola_function()">
+              <div class="form-row col-md-10 mx-auto text-cent">
+                  <div class="form-group col-md-6">
+                      <select class="selectpicker form-control" data-dropup-auto="false" data-style="btn-info" data-live-search="true" id="select_skola" onchange="select_skola_function()">
                           <option value="no_choice">Alla skolor</option>
                           <option value="stockholms-universitet">Stockholms universitet</option>
                           <option value="lund">Lunds universitet</option>
@@ -207,8 +204,8 @@
                       </select>
                   </div>
 
-                  <div class="form-group col-md-4">
-                      <select class="selectpicker form-control" data-style="btn-info" data-live-search="true" id="select_stad" onchange="select_stad_function()">
+                  <div class="form-group col-md-6">
+                      <select class="selectpicker form-control" data-dropup-auto="false" data-style="btn-info" data-live-search="true" id="select_stad" onchange="select_stad_function()">
                           <option value="no_choice">Alla städer</option>
                           <option value="stockholm">Stockholm</option>
                           <option value="goteborg">Göteborg</option>
@@ -221,14 +218,11 @@
                           <option value="lulea">Luleå</option>
                       </select>
                   </div>
-
-                  <div class="form-group col-md-2">
-                  </div>
               </div>
 
-              <div class="form-row">
-                  <div class="form-group col-md-8 mx-auto text-center">
-                      <select class="selectpicker form-control" data-style="btn-info" data-live-search="true" id="select_person" onchange="select_person_function()">
+              <div class="form-row col-md-10 mx-auto text-cent">
+                  <div class="form-group col-md-12 mx-auto text-center">
+                      <select class="selectpicker form-control" data-dropup-auto="false" data-style="btn-info" data-live-search="true" id="select_person" onchange="select_person_function()">
                           <option value="no_choice">Sök efter person</option>
                       </select>
                   </div>
