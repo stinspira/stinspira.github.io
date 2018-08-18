@@ -18,9 +18,20 @@ def bloggar():
 def klassrumsbesok():
     return render_template("klassrumsbesok.html")
 
+################################################################################
+# interviews START:
+################################################################################
 @app.route("/placeholder_intervju", methods=["GET", "POST"])
 def placeholder_intervju():
     return render_template("placeholder_intervju.html")
+
+@app.route("/anton_borgstrom", methods=["GET", "POST"])
+def anton_borgstrom():
+    return render_template("anton_borgstrom.html")
+
+################################################################################
+# interviews END:
+################################################################################
 
 @app.route("/placeholder_inspirator", methods=["GET", "POST"])
 def placeholder_inspirator():
