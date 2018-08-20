@@ -29,6 +29,10 @@ def placeholder_intervju():
 def anton_borgstrom():
     return render_template("anton_borgstrom.html")
 
+@app.route("/anton_sendel", methods=["GET", "POST"])
+def anton_sendel():
+    return render_template("anton_sendel.html")
+
 ################################################################################
 # interviews END:
 ################################################################################
