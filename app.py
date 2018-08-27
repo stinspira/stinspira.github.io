@@ -33,6 +33,10 @@ def anton_borgstrom():
 def anton_sendel():
     return render_template("anton_sendel.html")
 
+@app.route("/maria_karnell", methods=["GET", "POST"])
+def maria_karnell():
+    return render_template("maria_karnell.html")
+
 ################################################################################
 # interviews END:
 ################################################################################
