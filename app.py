@@ -49,6 +49,10 @@ def ludvig_berling():
 def martin_roginski():
     return render_template("martin_roginski.html")
 
+@app.route("/malin_sagemark", methods=["GET", "POST"])
+def malin_sagemark():
+    return render_template("malin_sagemark.html")
+
 ################################################################################
 # interviews END:
 ################################################################################
